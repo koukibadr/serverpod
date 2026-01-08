@@ -182,6 +182,7 @@ class MigrationGenerator {
     DatabaseDefinition liveDatabase;
     try {
       liveDatabase = await client.insights.getLiveDatabaseDefinition();
+      //TODO: piste : client.insights.runQueries(queries)
     } catch (e) {
       throw MigrationLiveDatabaseDefinitionException(
         exception: e.toString(),
